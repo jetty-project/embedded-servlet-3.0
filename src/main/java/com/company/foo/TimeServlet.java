@@ -1,6 +1,7 @@
 package com.company.foo;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,11 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns =
-{ "/test" })
-public class TestServlet extends HttpServlet
+{ "/time" })
+public class TimeServlet extends HttpServlet
 {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        request.getRequestDispatcher("/WEB-INF/html/index.html").forward(request,response);
+        response.setContentType("text/plain");
+        response.getWriter().write(new Date().toString());
     }
 }

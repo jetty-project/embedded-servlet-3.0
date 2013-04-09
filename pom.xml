@@ -18,13 +18,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-webapp</artifactId>
-      <version>8.1.5-SNAPSHOT</version>
+      <version>8.1.10.v20130312</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-annotations</artifactId>
-      <version>8.1.5-SNAPSHOT</version>
+      <version>8.1.10.v20130312</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
