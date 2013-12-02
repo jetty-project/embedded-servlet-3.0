@@ -32,6 +32,7 @@ public class EmbedMe {
 		context.setParentLoaderPriority(true);
 		server.setHandler(context);
 		server.start();
+		server.dump(System.err);
 		server.join();
 	}
 }
