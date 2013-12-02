@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.company.sample</groupId>
   <artifactId>sample-webapp</artifactId>
@@ -7,10 +7,15 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <packaging>war</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- jetty-version>8.1.10.v20130312</jetty-version -->
-    <jetty-version>9.1.0.v20131115</jetty-version>
+    <jetty-version>8.1.14.v20131031</jetty-version>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-webapp</artifactId>
@@ -52,9 +57,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                 </requireMavenVersion>
                 <requireJavaVersion>
                   <version>[1.6,)</version>
-                  <message>[ERROR] OLD JDK [${java.version}] in use. Jetty ${jetty-version} requires JDK 1.6 or newer</message>
+                  <message>[ERROR] OLD JDK [${java.version}] in use.
+                    Jetty ${jetty-version} requires JDK 1.6 or newer</message>
                 </requireJavaVersion>
-             </rules>
+              </rules>
             </configuration>
           </execution>
         </executions>
